@@ -23,4 +23,8 @@ export class Person {
   getBirthdayYear() {
     return 2021 - this.age;
   }
+
+  getGreeting() {
+    return `Olá, ${this.firstName}`;
+  }
 }

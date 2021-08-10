@@ -25,6 +25,18 @@ export class Person {
     }`;
   }
 
+  getFirstName() {
+    return this.firstName;
+  }
+
+  getMiddleName() {
+    return this.middleName;
+  }
+
+  getLastName() {
+    return this.lastName;
+  }
+
   getAge() {
     return this.age;
   }

@@ -1,13 +1,12 @@
 import { Person } from './person';
 
-let title: string = 'MeuApp';
-const appTitle: HTMLElement = document.getElementById('app.title');
-appTitle.innerHTML = title;
+let person = new Person('Felipe', 'Santos', 'Silva', 20, true);
 
-/*let person = new Person("Felipe", "Santos", "Silva", 19);
-const appParagraph: HTMLElement = document.getElementById('app.paragraph');
-appParagraph.innerHTML = paragraph;
+const fullname: HTMLElement = document.getElementById('fullname');
+fullname.innerHTML = person.getFullName();
 
-const appDiv: HTMLElement = document.getElementById('app');
-appDiv.innerHTML = `<h1>TypeScript Starter</h1>`;
-*/
+const age: HTMLElement = document.getElementById('age');
+age.innerHTML = 'Idade: ' + person.getAge();
+
+const year: HTMLElement = document.getElementById('year');
+year.innerHTML = 'Ano de nascimento: ' + person.getBirthdayYear();

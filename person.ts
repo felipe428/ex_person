@@ -3,28 +3,37 @@ export class Person {
   middleName: string;
   lastName: string;
   age: number;
+  bdayPassed: boolean;
 
   constructor(
     firstName: string,
     middleName: string,
     lastName: string,
-    age: number
+    age: number,
+    bdayPassed: boolean
   ) {
     this.firstName = firstName;
     this.middleName = middleName;
     this.lastName = lastName;
     this.age = age;
+    this.bdayPassed = bdayPassed;
   }
 
   getFullName() {
-    return this.firstName + this.middleName + this.lastName;
+    return `Nome completo: ${this.firstName} ${this.middleName} ${
+      this.lastName
+    }`;
+  }
+
+  getAge() {
+    return this.age;
   }
 
   getBirthdayYear() {
-    return 2021 - this.age;
-  }
-
-  getGreeting() {
-    return `Olá, ${this.firstName}`;
+    if (this.bdayPassed == true) {
+      return new Date().getFullYear() - this.age;
+    } else {
+      return new Date().getFullYear() - (this.age + 1);
+    }
   }
 }
